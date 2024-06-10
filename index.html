@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link href="OnOffSwitch.css" rel="stylesheet" />
+    <script src="OnOffSwitch.js"></script>
+</head>
+
+<body>
+
+    <div class="cont"></div>
+
+    <hr /><on-off-switch class="switch" data-store-id="onoff-32" data-value="on"></on-off-switch>
+    <button>Change to off</button><button class="two">Change to on</button>
+
+    <hr />
+
+    <on-off-switch data-value="on"></on-off-switch> - this doesn't store in local storage
+
+    <script>
+
+        // you can also append the control to DOM
+        document.querySelector('.cont').innerHTML = '<on-off-switch data-store-id="onoff-31" data-value="on"></on-off-switch>'
+
+        // here's how you listen to changes
+        document.querySelector('.switch').addEventListener('change', function (e) {
+            console.log('CHANGE new val:', e.detail.value)
+        })
+
+        // set the values programatically like this:
+        document.querySelector('button').addEventListener('click', function (e) {
+            document.querySelector('.switch').dataset.value = 'off'
+        })
+
+        document.querySelector('button.two').addEventListener('click', function (e) {
+            document.querySelector('.switch').dataset.value = 'on'
+        })
+    </script>
+</body>
+
+</html>

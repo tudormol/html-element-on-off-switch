@@ -1,0 +1,52 @@
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+
+/* ON/OFF SWITCH */
+
+$color-off: #494949;
+$color-on: #1753AD;
+
+on-off-switch {
+  width: 30px;
+  height: 20px;
+  border-radius: 11px;
+  position: relative;
+  display: inline-block;
+  transition-duration: 0.1s;
+  background: $color-off;
+  border: 1px solid $color-off;
+
+  &.on {
+    background: $color-on;
+    border: 1px solid $color-on;
+
+    &:active {
+      background: darken($color-on, 3%);
+    }
+
+    &::after {
+      left: 12px;
+    }
+  }
+
+  &:active {
+    background: lighten($color-off, 3%);
+  }
+
+  &:after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 7px;
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    transition-duration: 0.2s;
+  }
+}

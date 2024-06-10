@@ -1,0 +1,41 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+/* ON/OFF SWITCH */
+on-off-switch {
+  width: 30px;
+  height: 20px;
+  border-radius: 11px;
+  position: relative;
+  display: inline-block;
+  transition-duration: 0.1s;
+  background: #494949;
+  border: 1px solid #494949;
+}
+on-off-switch.on {
+  background: #1753AD;
+  border: 1px solid #1753AD;
+}
+on-off-switch.on:active {
+  background: #154d9f;
+}
+on-off-switch.on::after {
+  left: 12px;
+}
+on-off-switch:active {
+  background: #515151;
+}
+on-off-switch:after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 7px;
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  transition-duration: 0.2s;
+}/*# sourceMappingURL=OnOffSwitch.css.map */
