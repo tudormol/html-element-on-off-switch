@@ -1,6 +1,9 @@
 # html-element-on-off-switch
 An OnOffSwitch HTMLElement Component (with iOS style)
 
+![on off switch](http://tudormoldovan.eu/git-assets/onoff.png)
+
+
 Custom on/off switch UI component that extends HTMLElement. Stores the value in the local storage if the attribute data-store-id is specified.
 
 Usage:
